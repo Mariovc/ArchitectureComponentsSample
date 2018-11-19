@@ -27,5 +27,9 @@
     <action
             android:id="@+id/action_b_graph_pop"
             app:popUpTo="@id/b_graph"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right"/>
 </navigation>
