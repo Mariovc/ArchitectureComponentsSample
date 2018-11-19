@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/a_fragment">
+    <fragment
+            android:id="@+id/a_fragment"
+            android:name="com.mvc.architecturecomponents.AFragment"
+            tools:layout="@layout/fragment_a">
+        <action
+                android:id="@+id/action_a_to_b"
+                app:destination="@+id/b_fragment"
+                app:enterAnim="@anim/slide_from_right"
+                app:exitAnim="@anim/slide_to_left"
+                app:popEnterAnim="@anim/slide_from_left"
+                app:popExitAnim="@anim/slide_to_right"/>
+        <action
+                android:id="@+id/action_a_fragment_to_b_graph2"
+                app:destination="@id/b_graph"/>
+    </fragment>
+    <fragment
+            android:id="@+id/b_fragment"
+            android:name="com.mvc.architecturecomponents.BFragment"
+            tools:layout="@layout/fragment_b">
+        <action
+                android:id="@+id/action_b_fragment_to_b_graph"
+                app:destination="@id/b_graph"/>
+    </fragment>
+
+    <navigation
+            android:id="@+id/b_graph"
+            app:startDestination="@id/c_fragment">
+        <fragment
+                android:id="@+id/c_fragment"
+                android:label="Fragment C"
+                android:name="com.mvc.architecturecomponents.CFragment"
+                tools:layout="@layout/fragment_c">
+            <action
+                    android:id="@+id/action_c_to_d"
+                    app:destination="@id/d_fragment"
+                    app:enterAnim="@anim/slide_from_right"
+                    app:exitAnim="@anim/slide_to_left"
+                    app:popEnterAnim="@anim/slide_from_left"
+                    app:popExitAnim="@anim/slide_to_right"/>
+        </fragment>
+        <fragment
+                android:id="@+id/d_fragment"
+                android:label="Fragment D"
+                android:name="com.mvc.architecturecomponents.DFragment"
+                tools:layout="@layout/fragment_d">
+        </fragment>
+        <action
+                android:id="@+id/action_b_graph_pop"
+                app:popUpTo="@id/b_graph"
+                app:popUpToInclusive="true"/>
+    </navigation>
+</navigation>
