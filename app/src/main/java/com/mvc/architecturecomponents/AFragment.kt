@@ -26,7 +26,7 @@ class AFragment : Fragment() {
         view.findViewById<View>(R.id.button).setOnClickListener {
             val navController = Navigation.findNavController(view)
             val action = AFragmentDirections.actionAToB()
-//            action.setArgumentButtonName("argument safe passed")
+            action.setArgumentButtonName("argument safe passed")
             navController.navigate(action)
         }
         view.findViewById<View>(R.id.button2).setOnClickListener {
