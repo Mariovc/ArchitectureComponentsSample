@@ -25,11 +25,13 @@ class AFragment : Fragment() {
 
         view.findViewById<View>(R.id.button).setOnClickListener {
             val navController = Navigation.findNavController(view)
-            navController.navigate(R.id.action_a_to_b)
+            val action = AFragmentDirections.actionAToB()
+//            action.setArgumentButtonName("argument safe passed")
+            navController.navigate(action)
         }
         view.findViewById<View>(R.id.button2).setOnClickListener {
             val navController = androidx.navigation.Navigation.findNavController(view)
-            navController.navigate(com.mvc.architecturecomponents.R.id.action_a_fragment_to_b_graph2)
+            navController.navigate(R.id.action_a_fragment_to_b_graph2)
         }
 
         return view

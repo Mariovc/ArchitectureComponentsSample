@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.navigation.Navigation
 
 /**
@@ -23,10 +24,12 @@ class BFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_b, container, false)
-        view.findViewById<View>(R.id.button).setOnClickListener {
+        val button = view.findViewById<View>(R.id.button) as TextView
+        button.setOnClickListener {
             val navController = Navigation.findNavController(view)
             navController.navigate(R.id.action_b_fragment_to_b_graph)
         }
+        button.text = BFragmentArgs.fromBundle(arguments).argumentButtonName
 
         return view
     }
