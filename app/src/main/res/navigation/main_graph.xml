@@ -39,5 +39,7 @@
                 app:exitAnim="@anim/slide_to_left"
                 app:popEnterAnim="@anim/slide_from_left"
                 app:popExitAnim="@anim/slide_to_right"/>
+        <deepLink app:uri="www.example.com/fragmentb/{argumentText}"/>
+        <!--adb shell am start -W -a android.intent.action.VIEW -d "http://www.example.com/fragmentb/texto com.mvc.architecturecomponents-->
     </fragment>
 </navigation>

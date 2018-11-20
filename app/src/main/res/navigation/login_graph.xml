@@ -23,6 +23,8 @@
             android:label="Login 2"
             android:name="com.mvc.architecturecomponents.Login2Fragment"
             tools:layout="@layout/fragment_login2">
+        <deepLink app:uri="www.example.com/login2"/>
+        <!--adb shell am start -W -a android.intent.action.VIEW -d "http://www.example.com/login2 com.mvc.architecturecomponents-->
     </fragment>
     <action
             android:id="@+id/action_login_graph_pop"
