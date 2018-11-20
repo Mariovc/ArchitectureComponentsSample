@@ -29,7 +29,7 @@
             android:name="com.mvc.architecturecomponents.BFragment"
             tools:layout="@layout/fragment_b">
         <argument
-                android:name="argumentButtonName"
+                android:name="argumentText"
                 android:defaultValue="Default value"
                 app:argType="string"/>
         <action

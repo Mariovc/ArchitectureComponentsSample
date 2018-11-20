@@ -32,7 +32,7 @@ class BFragment : Fragment() {
         val titleTextView = view.findViewById<TextView>(R.id.title)
         titleTextView.text = String.format("%s\nwith: %s",
             titleTextView.text,
-            BFragmentArgs.fromBundle(arguments).argumentButtonName)
+            BFragmentArgs.fromBundle(arguments).argumentText)
 
         return view
     }
