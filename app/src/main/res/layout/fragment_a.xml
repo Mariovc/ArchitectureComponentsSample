@@ -10,9 +10,11 @@
         >
 
     <TextView
+            android:id="@+id/titleA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
+            android:transitionName="titleSharedTransition"
             android:text="A Fragment"
             android:layout_margin="10dp"
             android:layout_gravity="center"

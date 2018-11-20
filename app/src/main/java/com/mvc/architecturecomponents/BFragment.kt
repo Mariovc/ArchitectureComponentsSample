@@ -1,6 +1,8 @@
 package com.mvc.architecturecomponents
 
 import android.os.Bundle
+import android.support.transition.ChangeBounds
+import android.support.transition.TransitionInflater
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -23,6 +25,11 @@ class BFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val transition = TransitionInflater.from(this.activity).inflateTransition(android.R.transition.move)
+
+        sharedElementEnterTransition = ChangeBounds().apply {
+            enterTransition = transition
+        }
         val view = inflater.inflate(R.layout.fragment_b, container, false)
         val button = view.findViewById<View>(R.id.button) as TextView
         button.setOnClickListener {
