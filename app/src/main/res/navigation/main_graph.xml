@@ -4,7 +4,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
             app:startDestination="@id/a_fragment">
-    <include app:graph="@navigation/b_graph"/>
+    <include app:graph="@navigation/login_graph"/>
     <fragment
             android:id="@+id/a_fragment"
             android:name="com.mvc.architecturecomponents.AFragment"
@@ -18,7 +18,7 @@
                 app:popExitAnim="@anim/slide_to_bottom"/>
         <action
                 android:id="@+id/action_a_fragment_to_b_graph2"
-                app:destination="@id/b_graph"
+                app:destination="@id/login_graph"
                 app:enterAnim="@anim/slide_from_right"
                 app:exitAnim="@anim/slide_to_left"
                 app:popEnterAnim="@anim/slide_from_left"
@@ -34,7 +34,7 @@
                 app:argType="string"/>
         <action
                 android:id="@+id/action_b_fragment_to_b_graph"
-                app:destination="@id/b_graph"
+                app:destination="@id/login_graph"
                 app:enterAnim="@anim/slide_from_right"
                 app:exitAnim="@anim/slide_to_left"
                 app:popEnterAnim="@anim/slide_from_left"

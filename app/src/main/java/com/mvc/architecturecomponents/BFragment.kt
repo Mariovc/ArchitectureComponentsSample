@@ -29,7 +29,10 @@ class BFragment : Fragment() {
             val navController = Navigation.findNavController(view)
             navController.navigate(R.id.action_b_fragment_to_b_graph)
         }
-        button.text = BFragmentArgs.fromBundle(arguments).argumentButtonName
+        val titleTextView = view.findViewById<TextView>(R.id.title)
+        titleTextView.text = String.format("%s\nwith: %s",
+            titleTextView.text,
+            BFragmentArgs.fromBundle(arguments).argumentButtonName)
 
         return view
     }

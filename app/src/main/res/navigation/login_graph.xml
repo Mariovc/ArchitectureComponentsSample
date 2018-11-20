@@ -3,30 +3,30 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/b_graph"
-        app:startDestination="@id/c_fragment">
+        android:id="@+id/login_graph"
+        app:startDestination="@id/login1_fragment">
     <fragment
-            android:id="@+id/c_fragment"
-            android:label="Fragment C"
-            android:name="com.mvc.architecturecomponents.CFragment"
-            tools:layout="@layout/fragment_c">
+            android:id="@+id/login1_fragment"
+            android:label="Login 1"
+            android:name="com.mvc.architecturecomponents.Login1Fragment"
+            tools:layout="@layout/fragment_login1">
         <action
-                android:id="@+id/action_c_to_d"
-                app:destination="@id/d_fragment"
+                android:id="@+id/action_login1_to_login2"
+                app:destination="@id/login2_fragment"
                 app:enterAnim="@anim/slide_from_right"
                 app:exitAnim="@anim/slide_to_left"
                 app:popEnterAnim="@anim/slide_from_left"
                 app:popExitAnim="@anim/slide_to_right"/>
     </fragment>
     <fragment
-            android:id="@+id/d_fragment"
-            android:label="Fragment D"
-            android:name="com.mvc.architecturecomponents.DFragment"
-            tools:layout="@layout/fragment_d">
+            android:id="@+id/login2_fragment"
+            android:label="Login 2"
+            android:name="com.mvc.architecturecomponents.Login2Fragment"
+            tools:layout="@layout/fragment_login2">
     </fragment>
     <action
-            android:id="@+id/action_b_graph_pop"
-            app:popUpTo="@id/b_graph"
+            android:id="@+id/action_login_graph_pop"
+            app:popUpTo="@id/login_graph"
             app:popUpToInclusive="true"
             app:enterAnim="@anim/slide_from_right"
             app:exitAnim="@anim/slide_to_left"

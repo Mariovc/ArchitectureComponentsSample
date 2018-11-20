@@ -10,23 +10,28 @@
         >
 
     <TextView
-            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:background="@android:color/holo_orange_light"
-            android:text="A"
+            android:layout_marginBottom="40dp"
+            android:text="A Fragment"
             android:layout_margin="10dp"
             android:layout_gravity="center"
             />
 
-    <TextView
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
+    <Button
+            android:id="@+id/button"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            android:background="@android:color/holo_orange_light"
-            android:text="B Graph"
+            android:text="Go to B"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+
+    <Button
+            android:id="@+id/button2"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Login"
             android:layout_margin="10dp"
             android:layout_gravity="center"
             />
