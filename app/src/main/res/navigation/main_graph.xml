@@ -23,6 +23,13 @@
                 app:exitAnim="@anim/slide_to_left"
                 app:popEnterAnim="@anim/slide_from_left"
                 app:popExitAnim="@anim/slide_to_right"/>
+        <action
+                android:id="@+id/action_act2"
+                app:destination="@+id/detail_activity"
+                app:enterAnim="@anim/slide_from_bottom"
+                app:exitAnim="@anim/slide_to_top"
+                app:popEnterAnim="@anim/slide_from_top"
+                app:popExitAnim="@anim/slide_to_bottom"/>
     </fragment>
     <fragment
             android:id="@+id/b_fragment"
@@ -42,4 +49,9 @@
         <deepLink app:uri="www.example.com/fragmentb/{argumentText}"/>
         <!--adb shell am start -W -a android.intent.action.VIEW -d "http://www.example.com/fragmentb/texto com.mvc.architecturecomponents-->
     </fragment>
+    <activity
+            android:id="@+id/detail_activity"
+            android:name="com.mvc.architecturecomponents.DetailActivity"
+            tools:layout="@layout/activity_detail"
+            />
 </navigation>

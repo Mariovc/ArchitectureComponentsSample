@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 
 /**
  * A fragment with a Google +1 button.
@@ -30,8 +31,12 @@ class AFragment : Fragment() {
             navController.navigate(action)
         }
         view.findViewById<View>(R.id.button2).setOnClickListener {
-            val navController = androidx.navigation.Navigation.findNavController(view)
+            val navController = findNavController(view)
             navController.navigate(R.id.action_a_fragment_to_b_graph2)
+        }
+        view.findViewById<View>(R.id.button3).setOnClickListener {
+            val navController = findNavController(view)
+            navController.navigate(R.id.action_act2)
         }
 
         return view

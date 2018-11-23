@@ -36,4 +36,14 @@
             android:layout_gravity="center"
             />
 
+    <Button
+            android:id="@+id/button3"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:text="Activity2"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            />
+    
+
 </LinearLayout>
